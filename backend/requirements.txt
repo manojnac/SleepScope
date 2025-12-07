@@ -9,3 +9,4 @@ xgboost
 joblib
 mne
 shap
+firebase-admin
