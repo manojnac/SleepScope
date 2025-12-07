@@ -7,5 +7,5 @@ router = APIRouter()
 
 @router.post("/", response_model=ISIResponse)
 def submit_isi(payload: ISIRequest):
-    total, severity = compute_isi(payload.responses)
+    total, severity = compute_isi(payload.responses, payload.user_id)
     return ISIResponse(total=total, severity=severity)

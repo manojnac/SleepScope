@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import isi, phq9, subtype, psg
+from app.routers import correlation
+
+app.include_router(correlation.router, prefix="/correlation", tags=["Correlation"])
 
 app = FastAPI(title="SleepScope Backend API")
 
